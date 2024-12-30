@@ -3,6 +3,9 @@ const firstNumber = 0;
 const secondNumber = 0;
 const operator = "";
 
+const calcDisplay = document.querySelector(".display");
+calcDisplay.textContent = "7+7";
+
 // Functions for calculator operations
 function add (num1, num2) {
     return num1 + num2;

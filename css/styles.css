@@ -17,6 +17,10 @@ body {
     margin: 0;
     height: 50px;
     width: 200px;
+    font-size: 2rem;
+    text-align: end;
+    letter-spacing: 10px;
+    line-height: 50px;
 }
 
 .container button {
