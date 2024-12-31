@@ -1,9 +1,9 @@
-// Global Variables for Project
+// ----- Global Variables for Project -----
 const firstNumber = 0;
 const secondNumber = 0;
 const operator = "";
 
-// HTML elements of the calculator
+// ----- HTML elements of the calculator -----
 const calcDisplay = document.querySelector(".display");
 const sevenBtn = document.querySelector(".seven");
 const eightBtn = document.querySelector(".eight");
@@ -22,8 +22,7 @@ const clearBtn = document.querySelector(".clear");
 const equalBtn = document.querySelector(".equal");
 const addBtn = document.querySelector(".addition");
 
-
-// Event Listeners for button elements
+// ----- vent Listeners for button elements -----
 sevenBtn.addEventListener("click", () => {
     calcDisplay.textContent += sevenBtn.innerHTML;
 });
@@ -70,7 +69,7 @@ clearBtn.addEventListener("click", () => {
     calcDisplay.textContent = "";
 });
 
-// Functions for calculator operations
+// ----- Functions for calculator operations -----
 function add (num1, num2) {
     return num1 + num2;
 }
@@ -87,7 +86,7 @@ function divide (num1, num2) {
     return num1 / num2;
 }
 
-// Function to call an operation
+// ----- Function to call an operation -----
 function operate (num1, operator, num2) {
     switch (operator) {
         case "+" :
