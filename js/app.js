@@ -1,7 +1,7 @@
 // ----- Global Variables for Project -----
-const firstNumber = 0;
-const secondNumber = 0;
-const operator = "";
+let firstNumber = 0;
+let secondNumber = 0;
+let operator = "";
 
 // ----- HTML elements of the calculator -----
 const calcDisplay = document.querySelector(".display");
@@ -69,6 +69,10 @@ clearBtn.addEventListener("click", () => {
     calcDisplay.textContent = "";
 });
 
+equalBtn.addEventListener("click", () => {
+    result(calcDisplay.innerHTML);
+})
+
 // ----- Functions for calculator operations -----
 function add (num1, num2) {
     return num1 + num2;
@@ -104,6 +108,25 @@ function operate (num1, operator, num2) {
         default :
             console.log("Not a valid operation");
     }
+}
+
+// ----- Function for displaying calculator result -----
+function result (equation) {
+    let position = 0;
+    for (let value in equation) {
+        if (isNaN(equation[value]) && equation[value] !== ".") {
+            position = parseInt(value);
+            operator = equation[value];
+        }
+    }
+    firstNumber = parseFloat(equation.slice(0, position));
+    secondNumber = parseFloat(equation.slice(position+1, equation.length));
+
+    console.log(`First Number = ${firstNumber}`);
+    console.log(`Second Number = ${secondNumber}`);
+
+    calcDisplay.textContent = "";
+    calcDisplay.textContent = operate(firstNumber, operator, secondNumber);
 }
 
 // ----- Test cases -----
