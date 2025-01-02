@@ -122,9 +122,6 @@ function result (equation) {
     firstNumber = parseFloat(equation.slice(0, position));
     secondNumber = parseFloat(equation.slice(position+1, equation.length));
 
-    console.log(`First Number = ${firstNumber}`);
-    console.log(`Second Number = ${secondNumber}`);
-
     calcDisplay.textContent = "";
     calcDisplay.textContent = operate(firstNumber, operator, secondNumber);
 }
@@ -141,3 +138,7 @@ console.log(`Addition of 10 + 10 = ${operate(10, "+", 10)}`);
 console.log(`Subtraction of 1000 - 350 = ${operate(1000, "-", 350)}`);
 console.log(`Multiplication of 50 * 50 = ${operate(50, "*", 50)}`);
 console.log(`Division of 1000 / 10 = ${operate(1000, "/", 10)}`);
+
+console.log("-- Numbers used in the equation --")
+console.log(`First Number = ${firstNumber}`);
+console.log(`Second Number = ${secondNumber}`);
