@@ -67,6 +67,9 @@ addBtn.addEventListener("click", () => {
 });
 clearBtn.addEventListener("click", () => {
     calcDisplay.textContent = "";
+    firstNumber = 0;
+    secondNumber = 0;
+    operator = "";
 });
 
 equalBtn.addEventListener("click", () => {
