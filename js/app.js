@@ -106,6 +106,10 @@ function operate (num1, operator, num2) {
             return multiply(num1, num2);
             break;
         case "/" :
+            if (num2 === 0) {
+                return "No dice!";
+                break;
+            }
             return divide(num1, num2);
             break;
         default :
