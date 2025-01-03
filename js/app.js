@@ -119,15 +119,15 @@ function operate (num1, operator, num2) {
 
 // ----- Function for displaying calculator result -----
 function result (equation) {
-    let position = 0;
+    let operatorPos = 0;
     for (let value in equation) {
         if (isNaN(equation[value]) && equation[value] !== ".") {
-            position = parseInt(value);
+            operatorPos = parseInt(value);
             operator = equation[value];
         }
     }
-    firstNumber = parseFloat(equation.slice(0, position));
-    secondNumber = parseFloat(equation.slice(position+1, equation.length));
+    firstNumber = parseFloat(equation.slice(0, operatorPos));
+    secondNumber = parseFloat(equation.slice(operatorPos + 1, equation.length));
 
     calcDisplay.textContent = "";
     calcDisplay.textContent = operate(firstNumber, operator, secondNumber);
