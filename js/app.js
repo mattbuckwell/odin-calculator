@@ -6,6 +6,7 @@ let operator = "";
 // ----- HTML elements of the calculator -----
 const clearBtn = document.querySelector(".clear");
 const equalBtn = document.querySelector(".equal");
+const calcDisplay = document.querySelector(".display");
 let btn = document.querySelectorAll(".btn");
 
 // ----- Event Listeners for button elements -----
