@@ -25,7 +25,9 @@ body {
     line-height: 50px;
 }
 
-.container .btn {
+.container .btn,
+.container .equal,
+.container .clear {
     height: 50px;
     width: 50px;
 }

@@ -4,67 +4,17 @@ let secondNumber = 0;
 let operator = "";
 
 // ----- HTML elements of the calculator -----
-const calcDisplay = document.querySelector(".display");
-const sevenBtn = document.querySelector(".seven");
-const eightBtn = document.querySelector(".eight");
-const nineBtn = document.querySelector(".nine");
-const divideBtn = document.querySelector(".divide");
-const fourBtn = document.querySelector(".four");
-const fiveBtn = document.querySelector(".five");
-const sixBtn = document.querySelector(".six");
-const multiplyBtn = document.querySelector(".multiply");
-const oneBtn = document.querySelector(".one");
-const twoBtn = document.querySelector(".two");
-const threeBtn = document.querySelector(".three");
-const subtractBtn = document.querySelector(".subtraction");
-const zeroBtn = document.querySelector(".zero");
 const clearBtn = document.querySelector(".clear");
 const equalBtn = document.querySelector(".equal");
-const addBtn = document.querySelector(".addition");
+let btn = document.querySelectorAll(".btn");
 
-// ----- vent Listeners for button elements -----
-sevenBtn.addEventListener("click", () => {
-    calcDisplay.textContent += sevenBtn.innerHTML;
-});
-eightBtn.addEventListener("click", () => {
-    calcDisplay.textContent += eightBtn.innerHTML;
-});
-nineBtn.addEventListener("click", () => {
-    calcDisplay.textContent += nineBtn.innerHTML;
-});
-divideBtn.addEventListener("click", () => {
-    calcDisplay.textContent += divideBtn.innerHTML;
-});
-fourBtn.addEventListener("click", () => {
-    calcDisplay.textContent += fourBtn.innerHTML;
-});
-fiveBtn.addEventListener("click", () => {
-    calcDisplay.textContent += fiveBtn.innerHTML;
-});
-sixBtn.addEventListener("click", () => {
-    calcDisplay.textContent += sixBtn.innerHTML;
-});
-multiplyBtn.addEventListener("click", () => {
-    calcDisplay.textContent += multiplyBtn.innerHTML;
-});
-oneBtn.addEventListener("click", () => {
-    calcDisplay.textContent += oneBtn.innerHTML;
-});
-twoBtn.addEventListener("click", () => {
-    calcDisplay.textContent += twoBtn.innerHTML;
-});
-threeBtn.addEventListener("click", () => {
-    calcDisplay.textContent += threeBtn.innerHTML;
-});
-subtractBtn.addEventListener("click", () => {
-    calcDisplay.textContent += subtractBtn.innerHTML;
-});
-zeroBtn.addEventListener("click", () => {
-    calcDisplay.textContent += zeroBtn.innerHTML;
-});
-addBtn.addEventListener("click", () => {
-    calcDisplay.textContent += addBtn.innerHTML;
-});
+// ----- Event Listeners for button elements -----
+btn.forEach(element => {
+    element.addEventListener("click", () => {
+        calcDisplay.textContent += element.innerHTML;
+    })
+})
+
 clearBtn.addEventListener("click", () => {
     calcDisplay.textContent = "";
     firstNumber = 0;
