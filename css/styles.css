@@ -1,6 +1,7 @@
 body {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,18 +12,25 @@ body {
     display: flex;
     flex-wrap: wrap;
     border: 1px solid #000;
-    height: 250px;
-    width: 200px;
+    background-color: cadetblue;
+    height: 328px;
+    width: 208px;
+    padding: 10px;
+    gap: 2px;
+    border-radius: 5px;
 }
 
 .container .display {
     margin: 0;
-    height: 50px;
-    width: 200px;
-    font-size: 2rem;
+    height: 70px;
+    width: 204px;
+    font-size: 1.6rem;
     text-align: end;
     letter-spacing: 10px;
-    line-height: 50px;
+    line-height: 70px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
 }
 
 .container .btn,
@@ -30,4 +38,19 @@ body {
 .container .clear {
     height: 50px;
     width: 50px;
+    border: lightgray;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.container .zero {
+    width: 102px;
+}
+
+.operator {
+    background-color: chocolate;
+}
+
+.top {
+    background-color: lightskyblue;
 }
