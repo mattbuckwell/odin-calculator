@@ -9,6 +9,7 @@ const equalBtn = document.querySelector(".equal");
 const calcDisplay = document.querySelector(".display");
 let calcBtn = document.querySelectorAll(".btn");
 const percentBtn = document.querySelector(".percent");
+const plusMinusBtn = document.querySelector(".plus-minus");
 
 // ----- Event Listeners for button elements -----
 calcBtn.forEach(element => {
@@ -25,6 +26,15 @@ percentBtn.addEventListener("click", () => {
         percentBtn.disabled = true;
     }
 });
+
+plusMinusBtn.addEventListener("click", () => {
+    let value = parseFloat(calcDisplay.innerHTML);
+    if (value >= 0) {
+        calcDisplay.textContent = `-${value}`;
+    } else if (value < 0) {
+        calcDisplay.innerHTML = value * -1;
+    }
+})
 
 clearBtn.addEventListener("click", () => {
     calcDisplay.textContent = "";
@@ -52,7 +62,7 @@ function multiply (num1, num2) {
 }
 
 function divide (num1, num2) {
-    return (num1 / num2).toFixed(2);
+    return (num1 / num2);
 }
 
 // ----- Function to call an operation -----
@@ -68,7 +78,7 @@ function operate (num1, operator, num2) {
             if (num2 === 0) {
                 return "No dice!";
             }
-            return divide(num1, num2);
+            return divide(num1, num2).toFixed(2);
         default :
             console.log("Not a valid operation");
     }
