@@ -18,10 +18,12 @@ calcBtn.forEach(element => {
 })
 
 percentBtn.addEventListener("click", () => {
-    let value = parseInt(calcDisplay.innerHTML);
-    value = value / 100;
-    calcDisplay.textContent = value;
-    percentBtn.disabled = true;
+    if (calcDisplay.innerHTML !== "") {
+        let value = parseInt(calcDisplay.innerHTML);
+        value = value / 100;
+        calcDisplay.textContent = value;
+        percentBtn.disabled = true;
+    }
 });
 
 clearBtn.addEventListener("click", () => {
@@ -50,7 +52,7 @@ function multiply (num1, num2) {
 }
 
 function divide (num1, num2) {
-    return num1 / num2;
+    return (num1 / num2).toFixed(2);
 }
 
 // ----- Function to call an operation -----
