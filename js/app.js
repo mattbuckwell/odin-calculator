@@ -105,6 +105,12 @@ function result (equation) {
     firstNumber = parseFloat(equation.slice(0, operatorPos));
     secondNumber = parseFloat(equation.slice(operatorPos + 1, equation.length));
 
+    if (isNaN(firstNumber)) {
+        firstNumber = 0;
+    } else if (isNaN(secondNumber)) {
+        secondNumber = 0;
+    }
+
     calcDisplay.textContent = "";
     calcDisplay.textContent = operate(firstNumber, operator, secondNumber);
 }
