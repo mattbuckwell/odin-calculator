@@ -11,6 +11,7 @@ let calcBtn = document.querySelectorAll(".btn");
 const percentBtn = document.querySelector(".percent");
 const plusMinusBtn = document.querySelector(".plus-minus");
 const operatorBtn = document.querySelectorAll(".operator");
+const dotBtn = document.querySelector(".dot");
 
 // ----- Event Listeners for button elements -----
 calcBtn.forEach(element => {
@@ -41,7 +42,12 @@ operatorBtn.forEach(element => {
     element.addEventListener("click", () => {
         percentBtn.disabled = true;
         plusMinusBtn.disabled = true;
+        dotBtn.disabled = false;
     })
+})
+
+dotBtn.addEventListener("click", () => {
+    dotBtn.disabled = true;
 })
 
 clearBtn.addEventListener("click", () => {
