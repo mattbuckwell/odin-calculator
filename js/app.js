@@ -93,7 +93,7 @@ function operate (num1, operator, num2) {
             if (num2 === 0) {
                 return "No dice!";
             }
-            return divide(num1, num2).toFixed(2);
+            return divide(num1, num2);
         default :
             console.log("Not a valid operation");
     }
@@ -118,7 +118,7 @@ function result (equation) {
     }
 
     calcDisplay.textContent = "";
-    calcDisplay.textContent = operate(firstNumber, operator, secondNumber);
+    calcDisplay.textContent = operate(firstNumber, operator, secondNumber).toFixed(2) / 1;
 }
 
 // ----- Test cases -----
