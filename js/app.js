@@ -49,20 +49,15 @@ function operate (num1, operator, num2) {
     switch (operator) {
         case "+" :
             return add(num1, num2);
-            break;
         case "-" :
             return subtract(num1, num2);
-            break;
         case "*" :
             return multiply(num1, num2);
-            break;
         case "/" :
             if (num2 === 0) {
                 return "No dice!";
-                break;
             }
             return divide(num1, num2);
-            break;
         default :
             console.log("Not a valid operation");
     }
@@ -96,7 +91,3 @@ console.log(`Addition of 10 + 10 = ${operate(10, "+", 10)}`);
 console.log(`Subtraction of 1000 - 350 = ${operate(1000, "-", 350)}`);
 console.log(`Multiplication of 50 * 50 = ${operate(50, "*", 50)}`);
 console.log(`Division of 1000 / 10 = ${operate(1000, "/", 10)}`);
-
-console.log("-- Numbers used in the equation --")
-console.log(`First Number = ${firstNumber}`);
-console.log(`Second Number = ${secondNumber}`);
