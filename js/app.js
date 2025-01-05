@@ -65,19 +65,19 @@ equalBtn.addEventListener("click", () => {
 
 // ----- Functions for calculator operations -----
 function add (num1, num2) {
-    return num1 + num2;
+    return (num1 + num2).toFixed(2) / 1;
 }
 
 function subtract (num1, num2) {
-    return num1 - num2;
+    return (num1 - num2).toFixed(2) / 1;
 }
 
 function multiply (num1, num2) {
-    return num1 * num2;
+    return (num1 * num2).toFixed(2) / 1;
 }
 
 function divide (num1, num2) {
-    return (num1 / num2);
+    return (num1 / num2).toFixed(2) / 1;
 }
 
 // ----- Function to call an operation -----
@@ -118,7 +118,7 @@ function result (equation) {
     }
 
     calcDisplay.textContent = "";
-    calcDisplay.textContent = operate(firstNumber, operator, secondNumber).toFixed(2) / 1;
+    calcDisplay.textContent = operate(firstNumber, operator, secondNumber);
 }
 
 // ----- Test cases -----
