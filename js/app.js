@@ -7,20 +7,29 @@ let operator = "";
 const clearBtn = document.querySelector(".clear");
 const equalBtn = document.querySelector(".equal");
 const calcDisplay = document.querySelector(".display");
-let btn = document.querySelectorAll(".btn");
+let calcBtn = document.querySelectorAll(".btn");
+const percentBtn = document.querySelector(".percent");
 
 // ----- Event Listeners for button elements -----
-btn.forEach(element => {
+calcBtn.forEach(element => {
     element.addEventListener("click", () => {
         calcDisplay.textContent += element.innerHTML;
     })
 })
+
+percentBtn.addEventListener("click", () => {
+    let value = parseInt(calcDisplay.innerHTML);
+    value = value / 100;
+    calcDisplay.textContent = value;
+    percentBtn.disabled = true;
+});
 
 clearBtn.addEventListener("click", () => {
     calcDisplay.textContent = "";
     firstNumber = 0;
     secondNumber = 0;
     operator = "";
+    percentBtn.disabled = false;
 });
 
 equalBtn.addEventListener("click", () => {

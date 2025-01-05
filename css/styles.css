@@ -24,7 +24,7 @@ body {
     margin: 0;
     height: 70px;
     width: 204px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: end;
     letter-spacing: 10px;
     line-height: 70px;
@@ -35,7 +35,9 @@ body {
 
 .container .btn,
 .container .equal,
-.container .clear {
+.container .clear,
+.container .plus-minus,
+.container .percent {
     height: 50px;
     width: 50px;
     border: lightgray;
