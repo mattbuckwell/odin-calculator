@@ -33,6 +33,8 @@ plusMinusBtn.addEventListener("click", () => {
     let value = parseFloat(calcDisplay.innerHTML);
     if (value >= 0) {
         calcDisplay.textContent = `-${value}`;
+    } else if (isNaN(value)) {
+        calcDisplay.innerHTML = "-";
     } else if (value < 0) {
         calcDisplay.innerHTML = value * -1;
     }
@@ -61,6 +63,8 @@ clearBtn.addEventListener("click", () => {
 
 equalBtn.addEventListener("click", () => {
     result(calcDisplay.innerHTML);
+    percentBtn.disabled = false;
+    plusMinusBtn.disabled = false;
 })
 
 // ----- Functions for calculator operations -----
