@@ -47,6 +47,11 @@ body {
     font-size: 1.2rem;
 }
 
+.container .dot:disabled {
+    background-color: #EFEFEF;
+    color: #000;
+}
+
 .btn:hover,
 .top:hover,
 .equal:hover {
