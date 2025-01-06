@@ -13,21 +13,21 @@ body {
     flex-wrap: wrap;
     border: 1px solid #000;
     background-color: cadetblue;
-    height: 328px;
-    width: 208px;
-    padding: 10px;
-    gap: 2px;
+    height: 656px;
+    width: 416px;
+    padding: 20px;
+    gap: 4px;
     border-radius: 5px;
 }
 
 .container .display {
     margin: 0;
-    height: 70px;
-    width: 204px;
+    height: 140px;
+    width: 408px;
     font-size: 1.4rem;
     text-align: end;
-    letter-spacing: 10px;
-    line-height: 70px;
+    letter-spacing: 20px;
+    line-height: 140px;
     background-color: #fff;
     border: 1px solid #000;
     border-radius: 5px;
@@ -38,15 +38,15 @@ body {
 .container .clear,
 .container .plus-minus,
 .container .percent {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     border: lightgray;
     border-radius: 5px;
     font-size: 1.2rem;
 }
 
 .container .zero {
-    width: 102px;
+    width: 204px;
 }
 
 .operator {
