@@ -2,7 +2,7 @@
 let firstNumber = 0;
 let secondNumber = 0;
 let operator = "";
-const reg = /[0-9+-/*]/;
+const reg = /[0-9+-/*.]/;
 
 // ----- HTML elements of the calculator -----
 const clearBtn = document.querySelector(".clear");
@@ -69,6 +69,7 @@ equalBtn.addEventListener("click", () => {
 })
 
 document.addEventListener("keydown", (e) => {
+    console.log(e.key);
     if (reg.test(e.key)) {
         calcDisplay.textContent += e.key;
     } else if (e.key === "Enter") {
@@ -79,9 +80,11 @@ document.addEventListener("keydown", (e) => {
         secondNumber = 0;
         operator = "";
     } else if (e.key === "%") {
-        let value = parseFloat(calcDisplay.innerHTML);
-        value = value / 100;
-        calcDisplay.textContent = value;
+        if (calcDisplay.innerHTML !== "") {
+            let value = parseFloat(calcDisplay.innerHTML);
+            value = value / 100;
+            calcDisplay.textContent = value;
+        }
     }
 })
 
