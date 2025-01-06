@@ -67,6 +67,23 @@ equalBtn.addEventListener("click", () => {
     plusMinusBtn.disabled = false;
 })
 
+document.addEventListener("keydown", (e) => {
+    console.log(e.key);
+   
+    if (e.key === "Enter") {
+        result(calcDisplay.innerHTML);
+        console.log(`The display shows - ${calcDisplay.innerHTML}`);
+    } else if (e.key === "Shift") {
+
+    } else if (e.key === "%") {
+        let value = parseInt(calcDisplay.innerHTML);
+        value = value / 100;
+        calcDisplay.textContent = value;
+    } else {
+        calcDisplay.textContent += e.key;
+    }
+})
+
 // ----- Functions for calculator operations -----
 function add (num1, num2) {
     return (num1 + num2).toFixed(2) / 1;
