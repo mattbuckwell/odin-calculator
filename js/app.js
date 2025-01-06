@@ -69,28 +69,19 @@ equalBtn.addEventListener("click", () => {
 })
 
 document.addEventListener("keydown", (e) => {
-    // if (e.key === "Enter") {
-    //     result(calcDisplay.innerHTML);
-    //     console.log(`The display shows - ${calcDisplay.innerHTML}`);
-    // } else if (e.key === "Shift" || e.key !== ) {
-
-    // } else if (e.key === "%") {
-    //     let value = parseInt(calcDisplay.innerHTML);
-    //     value = value / 100;
-    //     calcDisplay.textContent = value;
-    // } else {
-    //     calcDisplay.textContent += e.key;
-    // }
     if (reg.test(e.key)) {
         calcDisplay.textContent += e.key;
     } else if (e.key === "Enter") {
-        console.log(`The display shows - ${calcDisplay.innerHTML}`);
         result(calcDisplay.innerHTML);
     } else if (e.key === "c") {
         calcDisplay.textContent = "";
         firstNumber = 0;
         secondNumber = 0;
         operator = "";
+    } else if (e.key === "%") {
+        let value = parseFloat(calcDisplay.innerHTML);
+        value = value / 100;
+        calcDisplay.textContent = value;
     }
 })
 
