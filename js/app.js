@@ -69,11 +69,12 @@ equalBtn.addEventListener("click", () => {
 })
 
 document.addEventListener("keydown", (e) => {
-    console.log(e.key);
     if (reg.test(e.key)) {
         calcDisplay.textContent += e.key;
     } else if (e.key === "Enter") {
-        result(calcDisplay.innerHTML);
+        if (calcDisplay.innerHTML !== "") {
+            result(calcDisplay.innerHTML);
+        }
     } else if (e.key === "c") {
         calcDisplay.textContent = "";
         firstNumber = 0;
