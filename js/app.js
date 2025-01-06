@@ -60,6 +60,7 @@ clearBtn.addEventListener("click", () => {
     operator = "";
     percentBtn.disabled = false;
     plusMinusBtn.disabled = false;
+    dotBtn.disabled = false;
 });
 
 equalBtn.addEventListener("click", () => {

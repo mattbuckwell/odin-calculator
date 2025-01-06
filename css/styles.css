@@ -47,6 +47,12 @@ body {
     font-size: 1.2rem;
 }
 
+.btn:hover,
+.top:hover,
+.equal:hover {
+    filter: brightness(85%);
+}
+
 .container .zero {
     width: 204px;
 }
