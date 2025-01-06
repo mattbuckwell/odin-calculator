@@ -52,6 +52,12 @@ body {
     color: #000;
 }
 
+.percent:disabled,
+.plus-minus:disabled {
+    background-color: lightskyblue;
+    color: #000;
+}
+
 .btn:hover,
 .top:hover,
 .equal:hover {
