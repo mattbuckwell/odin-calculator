@@ -2,6 +2,7 @@
 let firstNumber = 0;
 let secondNumber = 0;
 let operator = "";
+const reg = /[0-9+-/*]/;
 
 // ----- HTML elements of the calculator -----
 const clearBtn = document.querySelector(".clear");
@@ -68,19 +69,28 @@ equalBtn.addEventListener("click", () => {
 })
 
 document.addEventListener("keydown", (e) => {
-    console.log(e.key);
-   
-    if (e.key === "Enter") {
-        result(calcDisplay.innerHTML);
-        console.log(`The display shows - ${calcDisplay.innerHTML}`);
-    } else if (e.key === "Shift") {
+    // if (e.key === "Enter") {
+    //     result(calcDisplay.innerHTML);
+    //     console.log(`The display shows - ${calcDisplay.innerHTML}`);
+    // } else if (e.key === "Shift" || e.key !== ) {
 
-    } else if (e.key === "%") {
-        let value = parseInt(calcDisplay.innerHTML);
-        value = value / 100;
-        calcDisplay.textContent = value;
-    } else {
+    // } else if (e.key === "%") {
+    //     let value = parseInt(calcDisplay.innerHTML);
+    //     value = value / 100;
+    //     calcDisplay.textContent = value;
+    // } else {
+    //     calcDisplay.textContent += e.key;
+    // }
+    if (reg.test(e.key)) {
         calcDisplay.textContent += e.key;
+    } else if (e.key === "Enter") {
+        console.log(`The display shows - ${calcDisplay.innerHTML}`);
+        result(calcDisplay.innerHTML);
+    } else if (e.key === "c") {
+        calcDisplay.textContent = "";
+        firstNumber = 0;
+        secondNumber = 0;
+        operator = "";
     }
 })
 
