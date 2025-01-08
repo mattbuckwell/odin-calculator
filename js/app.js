@@ -23,10 +23,7 @@ calcBtn.forEach(element => {
 
 percentBtn.addEventListener("click", () => {
     if (calcDisplay.innerHTML !== "") {
-        let value = parseInt(calcDisplay.innerHTML);
-        value = value / 100;
-        calcDisplay.textContent = value;
-        percentBtn.disabled = true;
+        percentConvert(calcDisplay.innerHTML);
     }
 });
 
@@ -83,12 +80,17 @@ document.addEventListener("keydown", (e) => {
         operator = "";
     } else if (e.key === "%") {
         if (calcDisplay.innerHTML !== "") {
-            let value = parseFloat(calcDisplay.innerHTML);
-            value = value / 100;
-            calcDisplay.textContent = value;
+            percentConvert(calcDisplay.innerHTML);
         }
     }
 })
+
+// ----- Helper Functions -----
+function percentConvert (value) {
+    value = (parseFloat(value)) / 100;
+    calcDisplay.textContent = value;
+    percentBtn.disabled = true;
+}
 
 // ----- Functions for calculator operations -----
 function add (num1, num2) {
