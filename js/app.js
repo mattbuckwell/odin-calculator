@@ -51,13 +51,7 @@ dotBtn.addEventListener("click", () => {
 })
 
 clearBtn.addEventListener("click", () => {
-    calcDisplay.textContent = "";
-    firstNumber = 0;
-    secondNumber = 0;
-    operator = "";
-    percentBtn.disabled = false;
-    plusMinusBtn.disabled = false;
-    dotBtn.disabled = false;
+    clearCalc();
 });
 
 equalBtn.addEventListener("click", () => {
@@ -74,10 +68,7 @@ document.addEventListener("keydown", (e) => {
             result(calcDisplay.innerHTML);
         }
     } else if (e.key === "c") {
-        calcDisplay.textContent = "";
-        firstNumber = 0;
-        secondNumber = 0;
-        operator = "";
+        clearCalc();
     } else if (e.key === "%") {
         if (calcDisplay.innerHTML !== "") {
             percentConvert(calcDisplay.innerHTML);
@@ -90,6 +81,16 @@ function percentConvert (value) {
     value = (parseFloat(value)) / 100;
     calcDisplay.textContent = value;
     percentBtn.disabled = true;
+}
+
+function clearCalc () {
+    calcDisplay.textContent = "";
+    firstNumber = 0;
+    secondNumber = 0;
+    operator = "";
+    percentBtn.disabled = false;
+    plusMinusBtn.disabled = false;
+    dotBtn.disabled = false;
 }
 
 // ----- Functions for calculator operations -----
