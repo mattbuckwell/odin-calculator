@@ -89,19 +89,22 @@ let calculator = {
         plusMinusBtn.disabled = false;
         dotBtn.disabled = false;
     },
+    roundValue (num) {
+        return num.toFixed(2) / 1;
+    },
     evaluate (num1, num2) {
         switch (this.operator) {
             case "+" :
-                return (num1 + num2).toFixed(2) / 1;;
+                return this.roundValue((num1 + num2));
             case "-" :
-                return (num1 - num2).toFixed(2) / 1; 
+                return this.roundValue((num1 - num2)); 
             case "*" :
-                return (num1 * num2).toFixed(2) / 1;
+                return this.roundValue((num1 * num2));
             case "/" :
                 if (num2 === 0) {
                     return "No dice!";
                 }
-                return (num1 / num2).toFixed(2) / 1;
+                return this.roundValue((num1 / num2));
             default :
                 console.log("Not a valid operation");
         }
