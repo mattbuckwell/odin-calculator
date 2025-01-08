@@ -40,7 +40,6 @@ plusMinusBtn.addEventListener("click", () => {
 
 operatorBtn.forEach(element => {
     element.addEventListener("click", () => {
-        percentBtn.disabled = true;
         plusMinusBtn.disabled = true;
         dotBtn.disabled = false;
     })
