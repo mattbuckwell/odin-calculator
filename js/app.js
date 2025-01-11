@@ -66,6 +66,9 @@ document.addEventListener("keydown", (e) => {
         if (calcDisplay.innerHTML !== "") {
             calculator.percentConvert(calcDisplay.innerHTML);
         }
+    } else if (e.key === "Backspace") {
+        let value = calcDisplay.innerHTML;
+        calcDisplay.textContent = value.slice(0, value.length -1);
     }
 })
 
