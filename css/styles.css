@@ -21,7 +21,7 @@ body {
     border-radius: 5px;
 }
 
-.container .display {
+.display {
     margin: 0;
     margin-bottom: 2px;
     height: 140px;
@@ -35,11 +35,11 @@ body {
     border-radius: 5px;
 }
 
-.container .btn,
-.container .equal,
-.container .clear,
-.container .plus-minus,
-.container .percent {
+.btn,
+.equal,
+.clear,
+.plus-minus,
+.percent {
     height: 100px;
     width: 100px;
     border: lightgray;

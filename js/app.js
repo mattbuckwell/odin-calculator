@@ -53,6 +53,7 @@ equalBtn.addEventListener("click", () => {
     plusMinusBtn.disabled = false;
 })
 
+// ----- Event Listener for keyboard use -----
 document.addEventListener("keydown", (e) => {
     if (calculator.reg.test(e.key)) {
         calcDisplay.textContent += e.key;
